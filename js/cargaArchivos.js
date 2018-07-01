@@ -1,18 +1,22 @@
-$.get("lojatienefuturo-users-locates.csv", function(csvString) { 
-    var data = $.csv.toObjects(csvString);
-    console.log(data);
- });
+// $.get("lojatienefuturo-users-locates.csv", function(csvString) { 
+//     var data = $.csv.toObjects(csvString);
+//     console.log(data);
+//  });
 
-// fetch('lojatienefuturo-users-locates.csv')
-//     .then(function (response) {
-//         return response.blob();
-//     })
-//     .then(function (myBlob) {
-//         var objectURL = URL.createObjectURL(myBlob);
-//         console.log(objectURL);
-//         var data = $.csv.toObjects(objectURL.blob);
-//         console.log(data);
-//     });
+fetch('lojatienefuturo-users-locates.csv')
+    .then(function (response) {
+        return response.blob();
+    })
+    .then(function (myBlob) {
+        var objectURL = URL.createObjectURL(myBlob);
+        var urlFinal = "";
+        for (let letra = 5; letra < objectURL.length; letra++) {
+            urlFinal += objectURL[letra];
+        }
+        console.log(urlFinal);
+        var data = $.csv.toObjects(urlFinal);
+        console.log(data);
+    });
 
 // var data = $.csv.toObjects("lojatienefuturo-users-locates.csv");
 
