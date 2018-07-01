@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery-csv.js"></script>
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>Plantilla mapa de calor</title>
+</head>
+
+<body>
+  <div id="floating-panel">
+    <button onclick="toggleHeatmap()">Activar/Desactivar</button>
+    <button onclick="changeGradient()">Cambiar color</button>
+    <button onclick="changeRadius()">Cambiar grosor</button>
+    <button onclick="changeOpacity()">Cambiar opacidad</button>
+  </div>
+  <div id="map"></div>
+
+  <!-- <script src="js/index.js"></script> -->
+  <script type="text/javascript" src="js/cargaArchivos.js"></script>
+  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwJFiyPp5W--JhIrrLCzhP6TYCHBa4Nn0&libraries=visualization&callback=initMap"> -->
+  </script>
+</body>
+
+</html>
